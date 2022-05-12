@@ -12,6 +12,13 @@
 
   &__logo {
     display: flex;
+    cursor: pointer;
+    opacity: .8;
+    transition: opacity .2s ease-in-out;
+
+    &:hover{
+        opacity: 1;
+    }
 
     img {
       margin-right: 15px;
