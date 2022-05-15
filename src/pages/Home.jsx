@@ -1,9 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 import { Categories, SortPopup, PizzaBloсk } from '../components'
 
 
-export function Home({ items }) {
+export function Home() {
+
+    // получаем актуальный стате
+    const pizzas = useSelector(state => state.pizzas.items)
+    console.log("Home => pizzas", pizzas)
+    
     return (
         <div>
             <div className="container">
@@ -13,7 +19,7 @@ export function Home({ items }) {
                 </div>
                 <h2 className="content__title">Все пиццы</h2>
                 <div className='content__items'>
-                    {items.map(obj => {
+                    {pizzas.map(obj => {
                         return <PizzaBloсk key={obj.id} {...obj} />
                     })}
                 </ div>

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 
 export function PizzaBloсk({ imageUrl, types, sizes, name, price, category }) {
-
     // types -> [0,1], показывает какой тип доступен 'тонкое' или 'традиционное'
     const aveilableTypes = ['тонкое', 'традиционное']
     const aveilableSizes = [26, 30, 40]
